@@ -12,9 +12,9 @@ pipeline {
         }
         stage ('build') {
             steps {
-            withCredentials([string(credentialsId: 'f3ced420-1776-4414-84af-ea548001c759', variable: 'mysecretvariable')]) {
+            withCredentials([string(credentialsId: '2d6a38af-b122-47ef-bf72-54fc850ddb5e', variable: 'mysecret')]) {
                 // some block
-                echo mysecretvariable
+                echo mysecret
         }
             sh 'npm install'    
             }
